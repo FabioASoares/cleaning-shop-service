@@ -16,19 +16,33 @@ class CustomCardButton extends StatelessWidget {
         width: 200,
         height: 200,
         child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0), // Defina o valor de raio desejado
+          ),
           elevation: 4,
           child: Column(
             children: [
               Expanded(
                 flex: 5,
-                child: Image.asset(imageName, width: imageWidth, height: imageHeight,),
+                child: Image.asset(
+                  imageName, 
+                  width: imageWidth, 
+                  height: imageHeight,),
               ),
               Expanded(
                 flex: 1,
-                child: Text(buttonName, style: const TextStyle(color: Color.fromRGBO(152, 1, 134, 1), fontWeight: FontWeight.bold),),
+                child: Text(
+                  buttonName, 
+                  style: const TextStyle(
+                    color: Color.fromRGBO(152, 1, 134, 1), 
+                    fontFamily: 'Quicksand',
+                    fontWeight: FontWeight.w500,
+                    ),
+                  ),
               ),
             ],
           ),
+          
         ),
       ),
     );
