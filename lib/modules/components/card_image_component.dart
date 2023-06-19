@@ -16,6 +16,7 @@ class CustomCardButton extends StatelessWidget {
         width: 200,
         height: 200,
         child: Card(
+          elevation: 4,
           child: Column(
             children: [
               Expanded(
@@ -24,7 +25,7 @@ class CustomCardButton extends StatelessWidget {
               ),
               Expanded(
                 flex: 1,
-                child: Text(buttonName),
+                child: Text(buttonName, style: const TextStyle(color: Color.fromRGBO(152, 1, 134, 1), fontWeight: FontWeight.bold),),
               ),
             ],
           ),
