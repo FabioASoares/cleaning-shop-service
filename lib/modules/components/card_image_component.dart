@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class CustomCardButton extends StatelessWidget {
   final String imageName;
   final String buttonName;
+  final double? imageHeight;
+  final double? imageWidth;
   final void Function()? onTap;
-  const CustomCardButton({super.key, required this.imageName, required this.buttonName, required this.onTap});
+  const CustomCardButton({super.key, required this.imageName, required this.buttonName, required this.onTap, this.imageHeight, this.imageWidth});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class CustomCardButton extends StatelessWidget {
             children: [
               Expanded(
                 flex: 5,
-                child: Image.asset(imageName),
+                child: Image.asset(imageName, width: imageWidth, height: imageHeight,),
               ),
               Expanded(
                 flex: 1,
